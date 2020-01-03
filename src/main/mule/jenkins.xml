@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="538a499a-7078-4e85-a6f5-8b9d17fe1f7c" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="jenkinsFlow" doc:id="db28a6e1-408b-4443-b57b-abe9e898cddc" >
+		<http:listener doc:name="Listener" doc:id="d1ae33a2-c365-4892-8fec-8d27c8afba0a" config-ref="HTTP_Listener_config" path="/Hello"/>
+		<set-payload value="Hello Word" doc:name="Set Payload" doc:id="e2d5f1bc-cd97-444d-a580-83a7c2bfe670" />
+		<logger level="INFO" doc:name="Logger" doc:id="97a83ba6-e283-46dd-bc93-a10322ee65e8" message="Success"/>
+	</flow>
+</mule>
