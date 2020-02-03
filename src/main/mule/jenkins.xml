@@ -12,5 +12,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<set-payload value="Hello Word" doc:name="Set Payload" doc:id="e2d5f1bc-cd97-444d-a580-83a7c2bfe670" />
 		<logger level="INFO" doc:name="Logger" doc:id="97a83ba6-e283-46dd-bc93-a10322ee65e8" message="success logger"/>
 		<set-payload value="Hello jenkins" doc:name="Set Payload" doc:id="e729ffcc-4cea-420f-8d1b-ca94388a0f5a" />
+		<logger level="INFO" doc:name="Logger" doc:id="fbba001a-a546-4d86-9256-e57b223aae4d" message="hello world"/>
 	</flow>
 </mule>
